@@ -1,0 +1,11 @@
+.dockerignore
+.gitignore
+Dockerfile
+LICENSE
+**/*.md
+**/*_test.go
+
+.git/
+.github/
+build/
+logs/
