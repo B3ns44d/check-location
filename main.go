@@ -27,6 +27,15 @@ func main() {
 
 	app.Get("/geo/:ip/:fields?", utils.Cache(10*time.Minute), utils.GetGeo())
 
+	if _, err := os.Stat("logs/app.log"); os.IsNotExist(err) {
+		os.Mkdir("logs", 0755)
+		f, err := os.Create("logs/app.log")
+		if err != nil {
+			log.Fatal(err)
+		}
+		f.Close()
+	}
+
 	file, err := os.OpenFile("./logs/app.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatalf("error opening file: %v", err)
