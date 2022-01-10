@@ -12,3 +12,5 @@ Examples:
 
 curl -X GET http://127.0.0.1:3005/geo/139.130.4.5
 ```
+
+[![Publish Docker Image](https://github.com/B3ns44d/check-location/actions/workflows/docker-image.yml/badge.svg)](https://github.com/B3ns44d/check-location/actions/workflows/docker-image.yml)
